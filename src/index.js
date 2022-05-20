@@ -5,7 +5,7 @@ inputForm.addEventListener('submit', (event) => { /*type of event is 'submit', '
     const input = document.querySelector('input#searchByID'); /*accessing input directly*/
     // console.log(input.value);
 
-    fetch(`http://localhost:3000/movies/${input.value}`)
+    fetch(`http://localhost:3000/movies/${input.value}`) /*pull value input and read input. Based on input, show movie title and details on page. If not correct ID input, show 401 error*/
     .then(response => response.json())
     .then(data => {
         const title = document.querySelector('section#movieDetails h4');
